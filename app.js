@@ -23,7 +23,7 @@ function render() {
   foglalasok.forEach(function (f, i) {
     var biztonsagosNev = f.nev.replace(/</g, "&lt;").replace(/>/g, "&gt;");
     lista.innerHTML += '<div class="sor"><span>' + f.ido + ' – ' + biztonsagosNev + '</span>' +
-      '<span class="torol" data-i="' + i + '">Törlés</span></div>';
+      '<button type="button" class="torol" data-i="' + i + '">Törlés</button></div>';
   });
   document.querySelectorAll('.torol').forEach(function (el) {
     el.addEventListener('click', function () {
